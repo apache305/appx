@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6EE9E3791AD2C5540033083D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9E3781AD2C5540033083D /* AppDelegate.swift */; };
+		6EE9E3801AD2C5540033083D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9E37E1AD2C5540033083D /* Main.storyboard */; };
+		6EE9E3821AD2C5540033083D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9E3811AD2C5540033083D /* Images.xcassets */; };
+		6EE9E3851AD2C5540033083D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9E3831AD2C5540033083D /* LaunchScreen.xib */; };
+		6EE9E3911AD2C5540033083D /* haorenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9E3901AD2C5540033083D /* haorenTests.swift */; };
+		6EE9E39B1AD2C57A0033083D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9E39A1AD2C57A0033083D /* QuestionViewController.swift */; };
+		6EE9E39D1AD2C5880033083D /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9E39C1AD2C5880033083D /* MessageViewController.swift */; };
+		6EE9E39F1AD2C7090033083D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9E39E1AD2C7090033083D /* Question.swift */; };
+		6EE9E3A11AD2C96A0033083D /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9E3A01AD2C96A0033083D /* ApiController.swift */; };
+		6EE9E3A31AD2CDC10033083D /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9E3A21AD2CDC10033083D /* QuestionCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6EE9E38B1AD2C5540033083D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EE9E36B1AD2C5540033083D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EE9E3721AD2C5540033083D;
+			remoteInfo = haoren;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6EE9E3731AD2C5540033083D /* haoren.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = haoren.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EE9E3771AD2C5540033083D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EE9E3781AD2C5540033083D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6EE9E37F1AD2C5540033083D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6EE9E3811AD2C5540033083D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6EE9E3841AD2C5540033083D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6EE9E38A1AD2C5540033083D /* haorenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = haorenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EE9E38F1AD2C5540033083D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EE9E3901AD2C5540033083D /* haorenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = haorenTests.swift; sourceTree = "<group>"; };
+		6EE9E39A1AD2C57A0033083D /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		6EE9E39C1AD2C5880033083D /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		6EE9E39E1AD2C7090033083D /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		6EE9E3A01AD2C96A0033083D /* ApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
+		6EE9E3A21AD2CDC10033083D /* QuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6EE9E3701AD2C5540033083D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EE9E3871AD2C5540033083D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6EE9E36A1AD2C5540033083D = {
+			isa = PBXGroup;
+			children = (
+				6EE9E3751AD2C5540033083D /* haoren */,
+				6EE9E38D1AD2C5540033083D /* haorenTests */,
+				6EE9E3741AD2C5540033083D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6EE9E3741AD2C5540033083D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EE9E3731AD2C5540033083D /* haoren.app */,
+				6EE9E38A1AD2C5540033083D /* haorenTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6EE9E3751AD2C5540033083D /* haoren */ = {
+			isa = PBXGroup;
+			children = (
+				6EE9E3781AD2C5540033083D /* AppDelegate.swift */,
+				6EE9E3A01AD2C96A0033083D /* ApiController.swift */,
+				6EE9E3A21AD2CDC10033083D /* QuestionCell.swift */,
+				6EE9E39C1AD2C5880033083D /* MessageViewController.swift */,
+				6EE9E39A1AD2C57A0033083D /* QuestionViewController.swift */,
+				6EE9E39E1AD2C7090033083D /* Question.swift */,
+				6EE9E37E1AD2C5540033083D /* Main.storyboard */,
+				6EE9E3811AD2C5540033083D /* Images.xcassets */,
+				6EE9E3831AD2C5540033083D /* LaunchScreen.xib */,
+				6EE9E3761AD2C5540033083D /* Supporting Files */,
+			);
+			path = haoren;
+			sourceTree = "<group>";
+		};
+		6EE9E3761AD2C5540033083D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6EE9E3771AD2C5540033083D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6EE9E38D1AD2C5540033083D /* haorenTests */ = {
+			isa = PBXGroup;
+			children = (
+				6EE9E3901AD2C5540033083D /* haorenTests.swift */,
+				6EE9E38E1AD2C5540033083D /* Supporting Files */,
+			);
+			path = haorenTests;
+			sourceTree = "<group>";
+		};
+		6EE9E38E1AD2C5540033083D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6EE9E38F1AD2C5540033083D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6EE9E3721AD2C5540033083D /* haoren */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EE9E3941AD2C5540033083D /* Build configuration list for PBXNativeTarget "haoren" */;
+			buildPhases = (
+				6EE9E36F1AD2C5540033083D /* Sources */,
+				6EE9E3701AD2C5540033083D /* Frameworks */,
+				6EE9E3711AD2C5540033083D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = haoren;
+			productName = haoren;
+			productReference = 6EE9E3731AD2C5540033083D /* haoren.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6EE9E3891AD2C5540033083D /* haorenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EE9E3971AD2C5540033083D /* Build configuration list for PBXNativeTarget "haorenTests" */;
+			buildPhases = (
+				6EE9E3861AD2C5540033083D /* Sources */,
+				6EE9E3871AD2C5540033083D /* Frameworks */,
+				6EE9E3881AD2C5540033083D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EE9E38C1AD2C5540033083D /* PBXTargetDependency */,
+			);
+			name = haorenTests;
+			productName = haorenTests;
+			productReference = 6EE9E38A1AD2C5540033083D /* haorenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6EE9E36B1AD2C5540033083D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = cooldown;
+				TargetAttributes = {
+					6EE9E3721AD2C5540033083D = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					6EE9E3891AD2C5540033083D = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 6EE9E3721AD2C5540033083D;
+					};
+				};
+			};
+			buildConfigurationList = 6EE9E36E1AD2C5540033083D /* Build configuration list for PBXProject "haoren" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6EE9E36A1AD2C5540033083D;
+			productRefGroup = 6EE9E3741AD2C5540033083D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6EE9E3721AD2C5540033083D /* haoren */,
+				6EE9E3891AD2C5540033083D /* haorenTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6EE9E3711AD2C5540033083D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EE9E3801AD2C5540033083D /* Main.storyboard in Resources */,
+				6EE9E3851AD2C5540033083D /* LaunchScreen.xib in Resources */,
+				6EE9E3821AD2C5540033083D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EE9E3881AD2C5540033083D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6EE9E36F1AD2C5540033083D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EE9E3791AD2C5540033083D /* AppDelegate.swift in Sources */,
+				6EE9E39F1AD2C7090033083D /* Question.swift in Sources */,
+				6EE9E3A11AD2C96A0033083D /* ApiController.swift in Sources */,
+				6EE9E3A31AD2CDC10033083D /* QuestionCell.swift in Sources */,
+				6EE9E39B1AD2C57A0033083D /* QuestionViewController.swift in Sources */,
+				6EE9E39D1AD2C5880033083D /* MessageViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EE9E3861AD2C5540033083D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EE9E3911AD2C5540033083D /* haorenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6EE9E38C1AD2C5540033083D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6EE9E3721AD2C5540033083D /* haoren */;
+			targetProxy = 6EE9E38B1AD2C5540033083D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6EE9E37E1AD2C5540033083D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EE9E37F1AD2C5540033083D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6EE9E3831AD2C5540033083D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EE9E3841AD2C5540033083D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6EE9E3921AD2C5540033083D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6EE9E3931AD2C5540033083D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6EE9E3951AD2C5540033083D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = haoren/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6EE9E3961AD2C5540033083D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = haoren/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6EE9E3981AD2C5540033083D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = haorenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/haoren.app/haoren";
+			};
+			name = Debug;
+		};
+		6EE9E3991AD2C5540033083D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = haorenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/haoren.app/haoren";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6EE9E36E1AD2C5540033083D /* Build configuration list for PBXProject "haoren" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EE9E3921AD2C5540033083D /* Debug */,
+				6EE9E3931AD2C5540033083D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EE9E3941AD2C5540033083D /* Build configuration list for PBXNativeTarget "haoren" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EE9E3951AD2C5540033083D /* Debug */,
+				6EE9E3961AD2C5540033083D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6EE9E3971AD2C5540033083D /* Build configuration list for PBXNativeTarget "haorenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EE9E3981AD2C5540033083D /* Debug */,
+				6EE9E3991AD2C5540033083D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6EE9E36B1AD2C5540033083D /* Project object */;
+}
