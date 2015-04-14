@@ -39,7 +39,7 @@ class Question {
         self.questionType       = questionType
     }
     
-    //解开json包
+    //解开收到的json包
     class func questionWithJson(resultArray:NSArray)-> [Question] {
         //每次刷新收到的问题
         var receivedQuestions = [Question]()

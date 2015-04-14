@@ -11,13 +11,18 @@ protocol APIControllerProtocol{
 }
 
 class APIController{
+    //这个类专门处理http类的请求
     
+    //代理变量 谁使用这个类 需要实现一个该代理类的协议
     var delegate : APIControllerProtocol
+    
+    //初始化函数
     init(delegate : APIControllerProtocol){
         self.delegate=delegate
         
     }
     
+    //发送get请求
     func get(path:String){
         //let uri = NSURL(string : path)
         let url = NSURL(string:path)
@@ -42,14 +47,9 @@ class APIController{
         
     }
     
-    func lookupAlbum(collectionId: Int) {
-        self.get("https://itunes.apple.com/lookup?id=\(collectionId)&entity=song")
-        
-    }
     
     
-    
-    
+    //for test
     func searchResultFor(searchTerm : String){
         
         let urlPath = "http://localhost:3030/users"
