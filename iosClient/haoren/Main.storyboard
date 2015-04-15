@@ -57,7 +57,7 @@
                                             <outlet property="questionLocation" destination="k55-AP-jaa" id="XPO-Rq-LuF"/>
                                             <outlet property="questionTitle" destination="h7b-L7-a3M" id="PuB-zM-U5I"/>
                                             <outlet property="questionUser" destination="wqw-BR-zOG" id="YQC-T7-vPE"/>
-                                            <segue destination="7fE-k7-7Kp" kind="show" id="hau-gb-gzE"/>
+                                            <segue destination="aV7-Qg-Wme" kind="show" id="kSR-Q7-mlE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -117,22 +117,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nlH-IW-3cx">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="KF7-O0-6YP">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oE0-b9-mbb">
-                                <rect key="frame" x="-23" y="-15" width="133" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="goBack">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="n7x-hf-cGt" kind="unwind" unwindAction="cancelToQuestionViewController:" id="Hab-rR-OOX"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="nlH-IW-3cx"/>
                     <connections>
-                        <outlet property="goBack" destination="oE0-b9-mbb" id="qOF-jf-cO4"/>
                         <outlet property="questionCreateTime" destination="5To-0m-3hR" id="E3W-5J-mqb"/>
                         <outlet property="questionLocation" destination="YYo-7X-n2Y" id="6kN-by-cUP"/>
                         <outlet property="questionTitle" destination="ahc-JD-6Wj" id="8XT-y0-5qO"/>
@@ -140,9 +126,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nYc-qF-s7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="n7x-hf-cGt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3397" y="-320"/>
+            <point key="canvasLocation" x="2971" y="-285"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -250,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxk-Q9-SoP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3043" y="419"/>
+            <point key="canvasLocation" x="2987" y="425"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -270,25 +255,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ZPw-Ua-NYN">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7fE-k7-7Kp" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="51x-Gb-Ad6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="RHq-c5-L16" kind="relationship" relationship="rootViewController" id="EZ4-ry-JJK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RFv-zP-8TF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2585" y="-320"/>
+            <point key="canvasLocation" x="-651" y="550"/>
         </scene>
         <!--Q&A-->
         <scene sceneID="Kmy-9L-1kd">
@@ -397,6 +364,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aws-a6-TsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="1124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AYc-lk-YWR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aV7-Qg-Wme" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jvv-sg-z78">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RHq-c5-L16" kind="relationship" relationship="rootViewController" id="OIz-yo-L8X"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ILD-dk-Scn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2286" y="-293"/>
         </scene>
     </scenes>
     <resources>

@@ -92,9 +92,9 @@ class QuestionViewController: UIViewController, UITableViewDataSource,UITableVie
     }
     
     //这个2b方法是用来返回到这里的。
-    @IBAction func cancelToQuestionViewController(segue:UIStoryboardSegue) {
-        println("does this fk run??")
-    }
+    //@IBAction func cancelToQuestionViewController(segue:UIStoryboardSegue) {
+       // println("does this fk run??")
+    //}
     
    
     
