@@ -35,6 +35,11 @@ class QuestionViewController: UIViewController, UITableViewDataSource,UITableVie
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+    
+        
+        
+        //println("sender is \(sender)")
         var questionDetailNav = segue.destinationViewController as! UINavigationController
         var questionDetailViewController: QuestionDetailViewController = questionDetailNav.viewControllers.first as! QuestionDetailViewController
         var questionIndex = self.questions.indexPathForSelectedRow()?.row
@@ -85,6 +90,13 @@ class QuestionViewController: UIViewController, UITableViewDataSource,UITableVie
         
     
     }
+    
+    //这个2b方法是用来返回到这里的。
+    @IBAction func cancelToQuestionViewController(segue:UIStoryboardSegue) {
+        println("does this fk run??")
+    }
+    
+   
     
     
     //视图被载入要干的事  这个是本视图的入口

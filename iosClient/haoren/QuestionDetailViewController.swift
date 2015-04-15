@@ -20,6 +20,7 @@ class QuestionDetailViewController: UIViewController {
     @IBOutlet weak var questionUser: UILabel!
     
     
+    @IBOutlet weak var goBack: UIButton!
     
     
     
@@ -29,10 +30,14 @@ class QuestionDetailViewController: UIViewController {
         self.questionCreateTime.text = currentQuestion?.questionCreateTime
         self.questionUser.text = currentQuestion?.questionUser
         
-        let backButton = UIBarButtonItem(title: "< Back", style: UIBarButtonItemStyle.Plain, target: self, action: "goBack")
-        self.navigationItem.leftBarButtonItem = backButton
+        //let backButton = UIBarButtonItem(title: "< Back", style: UIBarButtonItemStyle.Plain, target: self, action: "goBack")
+        //self.navigationItem.leftBarButtonItem = backButton
+        //self.navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Chalkduster", size: 20)!], forState: UIControlState.Normal)
         
-        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //println("let me see who is the sender \(sender)")
     }
     
     override func viewDidLoad() {
