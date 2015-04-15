@@ -34,11 +34,11 @@ class APIController{
                     println(error.localizedDescription)
                 }
                 var err: NSError?
-                var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
+                var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as! NSDictionary
                 if(err != nil){
                     print("JSON ERROR\(err!.localizedDescription)")
                 }
-                let results: NSArray = jsonResult["results"] as NSArray
+                let results: NSArray = jsonResult["results"] as! NSArray
                 //println(results)
                 self.delegate.didReceiveAPIResults(jsonResult)
                 //dispatch_async(dispatch_get_main_queue(), {self.tableData=results; self.myTableView!.reloadData()})
