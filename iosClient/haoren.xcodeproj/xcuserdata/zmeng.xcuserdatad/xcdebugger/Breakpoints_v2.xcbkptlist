@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "haoren/Message.swift"
-            timestampString = "450799996.469538"
+            timestampString = "450802750.675711"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "init(chatUser:chatLastMessage:chatLastTime:chatUnReadMessages:)"
-            landmarkType = "5">
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "Message"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

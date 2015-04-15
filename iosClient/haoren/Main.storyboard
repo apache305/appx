@@ -190,6 +190,7 @@
                                             <outlet property="chatUser" destination="sTA-nn-HIe" id="6EO-M7-suI"/>
                                             <outlet property="lastMessage" destination="DDJ-rX-KVB" id="iCc-0d-OJu"/>
                                             <outlet property="lastMessageTime" destination="zam-8y-lOz" id="1tv-FU-dMf"/>
+                                            <segue destination="r3F-9J-Uy4" kind="show" id="7OW-LA-GgV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -210,6 +211,47 @@
             </objects>
             <point key="canvasLocation" x="1562" y="425"/>
         </scene>
+        <!--Message View Controller-->
+        <scene sceneID="pmU-PL-Hhh">
+            <objects>
+                <viewController id="RBO-Rb-UMU" customClass="MessageViewController" customModule="haoren" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BSo-Ah-LzA"/>
+                        <viewControllerLayoutGuide type="bottom" id="jFx-RU-qyj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b0J-b4-TyJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="546" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="c1y-Gj-6yI">
+                                <rect key="frame" x="0.0" y="5" width="600" height="546"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" placeholderIntrinsicWidth="480" placeholderIntrinsicHeight="45" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" id="2Fp-fP-ohW" customClass="MessageCell" customModule="haoren" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Fp-fP-ohW" id="vBg-Ze-4Vp">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RBO-Rb-UMU" id="HFv-rX-EZk"/>
+                                    <outlet property="delegate" destination="RBO-Rb-UMU" id="agl-Wq-eba"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TaT-lF-S7p"/>
+                    <connections>
+                        <outlet property="messageTableView" destination="c1y-Gj-6yI" id="smi-Fl-U7a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxk-Q9-SoP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3043" y="419"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -223,6 +265,7 @@
                     <connections>
                         <segue destination="Qf9-fg-JKd" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="ttQ-c3-jsu" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="baE-ev-NPe" kind="relationship" relationship="viewControllers" id="hu0-cu-AdV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -284,6 +327,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbN-dG-LvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="425"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Joa-oE-CKm">
+            <objects>
+                <viewController id="s7V-uB-Vr8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2ZH-de-HRc"/>
+                        <viewControllerLayoutGuide type="bottom" id="heS-hc-rem"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iJ0-A5-GDE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我叫王麻子" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLt-lb-UtF">
+                                <rect key="frame" x="134" y="204" width="184" height="62"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我今年18岁" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ed6-LD-zAa">
+                                <rect key="frame" x="134" y="309" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UCN-mc-pMw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iSB-h6-Gvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562" y="1124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="agM-W1-edr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r3F-9J-Uy4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ysd-yF-tOY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RBO-Rb-UMU" kind="relationship" relationship="rootViewController" id="oye-Ox-51g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k3Z-kC-kIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2295" y="419"/>
+        </scene>
+        <!--My-->
+        <scene sceneID="i8L-he-NEa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="baE-ev-NPe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My" image="first" id="2Gs-Hq-63J"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QBo-jS-lRp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="s7V-uB-Vr8" kind="relationship" relationship="rootViewController" id="Xby-MW-v7h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aws-a6-TsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="1124"/>
         </scene>
     </scenes>
     <resources>
