@@ -8,8 +8,6 @@
 import Foundation
 class Chat {
     
-    //test haha
-    
     //跟谁在聊天
     var chatUser :String
     //最后一条消息
