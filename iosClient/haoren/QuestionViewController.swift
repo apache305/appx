@@ -34,6 +34,8 @@ class QuestionViewController: UIViewController, UITableViewDataSource,UITableVie
         
     }
     
+    
+    //这个是转场过渡的时候传递数据用的
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
     
@@ -56,8 +58,27 @@ class QuestionViewController: UIViewController, UITableViewDataSource,UITableVie
         cell.questionTitle.text      = question.questionTitle
         cell.questionLocation.text   = question.questionLocation
         cell.questionCreateTime.text = question.questionCreateTime
-        cell.questionUser.text       = question.questionUser        
+        cell.questionUser.text       = question.questionUser
+        
+
         return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 60.0;
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if tableView.respondsToSelector(Selector("setSeparatorInset:")){
+            tableView.separatorInset = UIEdgeInsetsZero
+        }
+        if tableView.respondsToSelector(Selector("setLayoutMargins:")){
+            tableView.layoutMargins = UIEdgeInsetsZero
+        }
+        if cell.respondsToSelector(Selector("setLayoutMargins:")){
+            cell.layoutMargins = UIEdgeInsetsZero
+        }
+        
     }
     
     
@@ -67,7 +88,7 @@ class QuestionViewController: UIViewController, UITableViewDataSource,UITableVie
     }
     
     
-    //也许是为了储存一些数据
+    //也许是为了储存一些数据 但是看起来没有用到
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var question = self.questionTable[indexPath.row] as Question
         println("did i work?")
@@ -96,12 +117,29 @@ class QuestionViewController: UIViewController, UITableViewDataSource,UITableVie
        // println("does this fk run??")
     //}
     
+    
+    func initAppear() {
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 76.0/255.0, green: 152/255.0, blue: 198/255.0, alpha: 1)
+        
+        //adjust tablevie
+        self.questions.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        //these lines are used to remove empty seperator liens.
+        self.questions.tableFooterView = UIView(frame: CGRectZero)
+        self.questions.backgroundColor = UIColor.clearColor()
+        //println(self.questions.frame)
+               
+    
+    }
+    
+ 
    
     
     
-    //视图被载入要干的事  这个是本视图的入口
+    //视图被载入要干的事  这个是本视图的入口 这个只会运行一遍  viewDidAppear 会运行两遍
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.initAppear()
         self.prepareForTest()
         
         println("test1")

@@ -15,6 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //self.window!.clipsToBounds = true;
+        self.window!.frame =  CGRectMake(0,0,self.window!.frame.size.width,self.window!.frame.size.height);
+        
+        
         return true
     }
 

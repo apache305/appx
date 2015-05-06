@@ -18,4 +18,6 @@ class QuestionCell:UITableViewCell{
     
     @IBOutlet weak var questionLocation: UILabel!
     
+    
+    
 }

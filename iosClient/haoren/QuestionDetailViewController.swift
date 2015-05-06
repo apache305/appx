@@ -19,9 +19,7 @@ class QuestionDetailViewController: UIViewController {
     @IBOutlet weak var questionCreateTime: UILabel!
     @IBOutlet weak var questionUser: UILabel!
     
-    
-    @IBOutlet weak var goBack: UIButton!
-    
+
     
     
     func initQuestion(){
