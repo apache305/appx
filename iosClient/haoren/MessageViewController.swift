@@ -25,14 +25,18 @@ class MessageViewController: UIViewController ,UITableViewDataSource,UITableView
         
         if eachMessage.messageIsMe {
             cell.textLabel?.textAlignment = .Left
-            cell.textLabel?.textColor = UIColor.blueColor()
+            cell.textLabel?.textColor = UIColor.blackColor()
+            cell.backgroundColor = UIColor.whiteColor()
             //println("???")
         } else {
-            cell.textLabel?.textAlignment = .Left
-            cell.textLabel?.textColor = UIColor.grayColor()
+            cell.textLabel?.textAlignment = .Right
+            cell.textLabel?.textColor = UIColor.blackColor()
+            cell.backgroundColor = UIColor.greenColor()
+
         }
         cell.textLabel?.text = eachMessage.messageBody
-        
+        //will change this to auto setting height
+        cell.frame = CGRectMake(0, 0, self.messageTableView.frame.size.width, 44);//
         //println("did i run again")
         return cell
         
@@ -80,6 +84,13 @@ class MessageViewController: UIViewController ,UITableViewDataSource,UITableView
         
         
         
+    }
+    override func viewDidLayoutSubviews() {
+        println("i load subviews")
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 76.0/255.0, green: 152/255.0, blue: 198/255.0, alpha: 1)
+        
+        //adjust tablevie
+        self.messageTableView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
     }
     
     
