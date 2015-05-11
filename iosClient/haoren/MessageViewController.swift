@@ -20,10 +20,19 @@ class MessageViewController: UIViewController ,UITableViewDataSource,UITableView
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("messageCell") as! MessageCell
+        //self configured cell
+        let cellIdentifier = NSStringFromClass(MessageCell)
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! MessageCell!
+        //let cell = tableView.dequeueReusableCellWithIdentifier("messageCell") as! //MessageCell
         var eachMessage = self.messageTable[indexPath.row]
+        println(cell)
+        if cell == nil {
+            cell = MessageCell(style: .Default, reuseIdentifier: cellIdentifier)
+        }
         
-        if eachMessage.messageIsMe {
+        cell.configureWithMessage(eachMessage)
+        
+        /*if eachMessage.messageIsMe {
             cell.textLabel?.textAlignment = .Left
             cell.textLabel?.textColor = UIColor.blackColor()
             cell.backgroundColor = UIColor.whiteColor()
@@ -37,7 +46,8 @@ class MessageViewController: UIViewController ,UITableViewDataSource,UITableView
         cell.textLabel?.text = eachMessage.messageBody
         //will change this to auto setting height
         cell.frame = CGRectMake(0, 0, self.messageTableView.frame.size.width, 44);//
-        //println("did i run again")
+        //println("did i run again")*/
+        
         return cell
         
     }

@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         //self.window!.clipsToBounds = true;
-        self.window!.frame =  CGRectMake(0,0,self.window!.frame.size.width,self.window!.frame.size.height);
+        //self.window!.frame =  CGRectMake(0,0,self.window!.frame.size.width,self.window!.frame.size.height);
         
         
         return true
