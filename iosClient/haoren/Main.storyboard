@@ -45,7 +45,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test.png" translatesAutoresizingMaskIntoConstraints="NO" id="8hL-da-lEe">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8hL-da-lEe">
                                                     <rect key="frame" x="5" y="5" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="V74-nF-gC7"/>
@@ -97,6 +97,7 @@
                                             <outlet property="questionCreateTime" destination="XUm-cb-7Tc" id="ZTR-0V-vEm"/>
                                             <outlet property="questionLocation" destination="k55-AP-jaa" id="XPO-Rq-LuF"/>
                                             <outlet property="questionTitle" destination="h7b-L7-a3M" id="PuB-zM-U5I"/>
+                                            <outlet property="questionUserImage" destination="8hL-da-lEe" id="Bki-YV-Ig9"/>
                                             <segue destination="aV7-Qg-Wme" kind="show" id="kSR-Q7-mlE"/>
                                         </connections>
                                     </tableViewCell>
@@ -433,6 +434,5 @@
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
-        <image name="test.png" width="200" height="200"/>
     </resources>
 </document>

@@ -61,6 +61,9 @@ class QuestionViewController: UIViewController, UITableViewDataSource,UITableVie
         cell.questionBody.text       = question.questionBody
         cell.questionBody.lineBreakMode = .ByWordWrapping // or NSLineBreakMode.ByWordWrapping
         cell.questionBody.numberOfLines = 0
+        cell.questionUserImage.image = UIImage(named: "meinv")
+        cell.questionUserImage.layer.cornerRadius = cell.questionUserImage.frame.size.width / 10.0  //
+        cell.questionUserImage.clipsToBounds = true
 
         //tuning cell's width
         cell.frame = CGRectMake(0, 0, self.questions.frame.size.width, 60);

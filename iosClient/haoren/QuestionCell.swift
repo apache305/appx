@@ -12,6 +12,7 @@ class QuestionCell:UITableViewCell{
     
     @IBOutlet weak var questionTitle: UILabel!
     
+    @IBOutlet weak var questionUserImage: UIImageView!
     @IBOutlet weak var questionBody: UILabel!
     
     @IBOutlet weak var questionCreateTime: UILabel!
