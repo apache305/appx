@@ -46,6 +46,10 @@ class QuestionDetailViewController: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
     }
+    //确定是这样么？？貌似这样好使。。直接在转场的时候设定
+    /*override func viewWillDisappear(animated: Bool) {
+        //self.tabBarController?.tabBar.hidden = false
+    }*/
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

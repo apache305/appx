@@ -46,7 +46,10 @@ class QuestionViewController: UIViewController, UITableViewDataSource,UITableVie
         var questionDetailViewController: QuestionDetailViewController = questionDetailNav.viewControllers.first as! QuestionDetailViewController
         var questionIndex = self.questions.indexPathForSelectedRow()?.row
         var selectedQuestion = self.questionTable[questionIndex!]
-        questionDetailViewController.currentQuestion = selectedQuestion 
+        questionDetailViewController.currentQuestion = selectedQuestion
+        questionDetailNav.hidesBottomBarWhenPushed = true
+        //questionDetailViewController.hidesBottomBarWhenPushed = true
+        //questionDetailViewController.hidesBottomBarWhenPushed = true
     }
     
     
