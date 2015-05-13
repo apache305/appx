@@ -7,14 +7,13 @@
 
 import Foundation
 import UIKit
-class QuestionDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class QuestionDetailViewController: UIViewController {
     
     @IBOutlet weak var questionTitle: UILabel!
     
     @IBOutlet weak var questionUserImageView: UIImageView!
-    @IBOutlet weak var questionDetailTableView: UITableView!
+
     var currentQuestion : Question?
-    var questionDetailTable: [QuestionDetail] = [QuestionDetail] ()
     
     @IBOutlet weak var buttonReply: UIButton!
 
@@ -51,7 +50,6 @@ class QuestionDetailViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initAppear()
         self.initQuestion()
         
         
@@ -59,38 +57,16 @@ class QuestionDetailViewController: UIViewController, UITableViewDataSource, UIT
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.questionDetailTable.count
-    
-    
-    }
     
     
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
-        
-    }
-    
-    
-    
-    
-    func initAppear() {
 
-        //these lines are used to remove empty seperator liens.
-        self.questionDetailTableView.tableFooterView = UIView(frame: CGRectZero)
-        self.questionDetailTableView.backgroundColor = UIColor.clearColor()
-        //println("wtf+ \(self.questionDetailTableView.frame.size.width)")
-        
-        
-    }
     override func viewDidLayoutSubviews() {
         println("QuestionDetailView load subviews")
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 76.0/255.0, green: 152/255.0, blue: 198/255.0, alpha: 1)
         
-        //adjust tablevie
-        self.questionDetailTableView.frame = CGRect(x: 0, y: 200, width: self.view.frame.size.width, height: self.view.frame.size.height)
+    
     }
     //确定是这样么？？貌似这样好使。。直接在转场的时候设定
     /*override func viewWillDisappear(animated: Bool) {
