@@ -7,12 +7,14 @@
 
 import Foundation
 import UIKit
-class QuestionDetailViewController: UIViewController {
+class QuestionDetailViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var questionTitle: UILabel!
     
     @IBOutlet weak var questionUserImageView: UIImageView!
+    @IBOutlet weak var questionContentView: UIScrollView!
 
+    @IBOutlet weak var questionBody: UILabel!
     var currentQuestion : Question?
     
     @IBOutlet weak var buttonReply: UIButton!
@@ -34,6 +36,9 @@ class QuestionDetailViewController: UIViewController {
         self.questionCreateTime.text = currentQuestion?.questionCreateTime
         self.questionUser.text = currentQuestion?.questionUser
         self.questionUserImageView.image = UIImage(named: "meinv")
+        self.questionBody.text = currentQuestion?.questionBody
+        self.questionBody.numberOfLines=0
+        self.questionBody.lineBreakMode = .ByWordWrapping
         
         
         

@@ -178,6 +178,17 @@
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nsu-i4-J4e">
                                 <rect key="frame" x="10" y="183" width="440" height="266"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="questionBody" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjS-Nl-zoy">
+                                        <rect key="frame" x="8" y="8" width="432" height="95"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="RHq-c5-L16" id="WXo-Sc-p1z"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -187,6 +198,8 @@
                         <outlet property="buttonDownVote" destination="nK8-Ea-m3c" id="ZMa-Kq-v2D"/>
                         <outlet property="buttonReply" destination="ND1-OE-Fua" id="8kq-A8-gvt"/>
                         <outlet property="buttonUpVote" destination="huw-wy-m4z" id="v8F-UB-u8M"/>
+                        <outlet property="questionBody" destination="fjS-Nl-zoy" id="ABc-Zd-p4i"/>
+                        <outlet property="questionContentView" destination="Nsu-i4-J4e" id="7Ps-r0-IcQ"/>
                         <outlet property="questionCreateTime" destination="5To-0m-3hR" id="E3W-5J-mqb"/>
                         <outlet property="questionLocation" destination="YYo-7X-n2Y" id="6kN-by-cUP"/>
                         <outlet property="questionTitle" destination="ahc-JD-6Wj" id="8XT-y0-5qO"/>
