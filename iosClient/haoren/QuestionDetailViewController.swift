@@ -7,14 +7,14 @@
 
 import Foundation
 import UIKit
-class QuestionDetailViewController: UIViewController, UIScrollViewDelegate {
+class QuestionDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var questionTitle: UILabel!
     
     @IBOutlet weak var questionUserImageView: UIImageView!
-    @IBOutlet weak var questionContentView: UIScrollView!
 
-    @IBOutlet weak var questionBody: UILabel!
+    @IBOutlet weak var questionDetailTableView: UITableView!
+    var tableContent:[MultiMediaCell] = [MultiMediaCell]()
+
     var currentQuestion : Question?
     
     @IBOutlet weak var buttonReply: UIButton!
@@ -29,16 +29,17 @@ class QuestionDetailViewController: UIViewController, UIScrollViewDelegate {
     
     
     func initQuestion(){
-        self.questionTitle.text = currentQuestion?.questionTitle
-        self.questionTitle.numberOfLines=0
-        self.questionTitle.lineBreakMode = .ByWordWrapping
+
         self.questionLocation.text = currentQuestion?.questionLocation
         self.questionCreateTime.text = currentQuestion?.questionCreateTime
         self.questionUser.text = currentQuestion?.questionUser
         self.questionUserImageView.image = UIImage(named: "meinv")
-        self.questionBody.text = currentQuestion?.questionBody
-        self.questionBody.numberOfLines=0
-        self.questionBody.lineBreakMode = .ByWordWrapping
+        
+        self.questionDetailTableView.tableFooterView = UIView(frame: CGRectZero)
+        self.questionDetailTableView.backgroundColor = UIColor.clearColor()
+        //println("wtf+ \(self.self.questionDetailTableView.frame.size.width)")
+        self.questionDetailTableView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+
         
         
         
@@ -47,6 +48,17 @@ class QuestionDetailViewController: UIViewController, UIScrollViewDelegate {
         //self.navigationItem.leftBarButtonItem = backButton
         //self.navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Chalkduster", size: 20)!], forState: UIControlState.Normal)
         
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let a = MultiMediaCell()
+        return a
+
+        
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.tableContent.count+1
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
