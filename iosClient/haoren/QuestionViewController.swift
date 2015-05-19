@@ -145,11 +145,11 @@ class QuestionViewController: UIViewController, UITableViewDataSource,UITableVie
     }
     
     override func viewDidLayoutSubviews() {
-        println("i load subviews")
+        //println("i load subviews")
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 76.0/255.0, green: 152/255.0, blue: 198/255.0, alpha: 1)
         
         //adjust tablevie
-            }
+    }
    
     
     
