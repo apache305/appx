@@ -69,8 +69,9 @@ class QuestionViewController: UIViewController, UITableViewDataSource,UITableVie
         cell.questionUserImage.clipsToBounds = true
 
         //tuning cell's width
-        cell.frame = CGRectMake(0, 0, self.questions.frame.size.width, 60);
-        println(cell.frame)
+        //cell.frame = CGRectMake(0, 0, self.questions.frame.size.width, 60);
+        //println(cell.contentView.frame)
+        //println(cell.frame)
         
 
         return cell
@@ -112,7 +113,7 @@ class QuestionViewController: UIViewController, UITableViewDataSource,UITableVie
     // 准备一些测试数据
         var q1:Question = Question(questionTitle: "我是一个标题1", questionBody: "我是问题的内容，我这个问题比较复杂，你得慢慢看", questionLocation: "100米", questionCreateTime: "2015/15/04", questionUser: "王麻子", questionReward: "1分", questionType: "紧急")
         var q2:Question = Question(questionTitle: "我是一个标题2", questionBody: "我是问题的内容，我这个问题比较复杂，你得慢慢看,我是问题的内容，我这个问题比较复杂，你得慢慢看", questionLocation: "200米", questionCreateTime: "2015/14/04", questionUser: "李麻子", questionReward: "2分", questionType: "不紧急")
-        var q3:Question = Question(questionTitle: "我是一个标题3", questionBody: "我是问题的内容，我这个问题比较复杂，你得慢慢看,我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看", questionLocation: "300米", questionCreateTime: "2015/13/04", questionUser: "张麻子", questionReward: "3分", questionType: "非常紧急")
+        var q3:Question = Question(questionTitle: "我是一个标题3,我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看", questionBody: "我是问题的内容，我这个问题比较复杂，你得慢慢看,我是问题的内容，我这个问题比较复杂，你得慢慢看, 我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看", questionLocation: "300米", questionCreateTime: "2015/13/04", questionUser: "张麻子", questionReward: "3分", questionType: "非常紧急")
         var q4:Question = Question(questionTitle: "我是一个标题4", questionBody: "我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看", questionLocation: "400米", questionCreateTime: "2015/12/04", questionUser: "赵麻子", questionReward: "4分", questionType: "一般般")
         var q5:Question = Question(questionTitle: "我是一个标题5", questionBody: "我是问题的内容，我这个问题比较复杂，你得慢慢看", questionLocation: "500米", questionCreateTime: "2015/11/04", questionUser: "钱麻子", questionReward: "5分", questionType: "捉急啊")
         self.questionTable.append(q1)
@@ -136,6 +137,8 @@ class QuestionViewController: UIViewController, UITableViewDataSource,UITableVie
         //these lines are used to remove empty seperator liens.
         self.questions.tableFooterView = UIView(frame: CGRectZero)
         self.questions.backgroundColor = UIColor.clearColor()
+        //self.questions.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+
         println("wtf+ \(self.questions.frame.size.width)")
                
     
@@ -146,8 +149,7 @@ class QuestionViewController: UIViewController, UITableViewDataSource,UITableVie
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 76.0/255.0, green: 152/255.0, blue: 198/255.0, alpha: 1)
         
         //adjust tablevie
-        self.questions.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-    }
+            }
    
     
     

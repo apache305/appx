@@ -25,7 +25,8 @@ class MessageViewController: UIViewController ,UITableViewDataSource,UITableView
         var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! MessageCell!
         //let cell = tableView.dequeueReusableCellWithIdentifier("messageCell") as! //MessageCell
         var eachMessage = self.messageTable[indexPath.row]
-        println(cell)
+        
+        //println(cell)
         if cell == nil {
             cell = MessageCell(style: .Default, reuseIdentifier: cellIdentifier)
         }

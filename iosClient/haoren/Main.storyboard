@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Question View Controller-->
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ENn-k1-MSo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ENn-k1-MSo">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -109,6 +110,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="ENn-k1-MSo" secondAttribute="bottom" id="7P8-hG-0YJ"/>
+                            <constraint firstAttribute="trailing" secondItem="ENn-k1-MSo" secondAttribute="trailing" id="Cq9-f8-xjC"/>
+                            <constraint firstItem="ENn-k1-MSo" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="E84-q2-YTy"/>
+                            <constraint firstItem="ENn-k1-MSo" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="nfu-ix-qDa"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sjl-By-ROJ"/>
                     <connections>
@@ -154,6 +161,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GM2-WF-jee">
                                 <rect key="frame" x="10" y="80" width="90" height="90"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="GM2-WF-jee" secondAttribute="height" multiplier="1:1" id="3NZ-47-XXF"/>
                                     <constraint firstAttribute="width" constant="90" id="8tb-Nm-xC1"/>
                                     <constraint firstAttribute="height" constant="90" id="ED9-nq-WOh"/>
                                 </constraints>
@@ -197,7 +205,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="MZx-Go-O47">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="MZx-Go-O47">
                                 <rect key="frame" x="10" y="178" width="390" height="342"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -217,7 +225,7 @@
                             <constraint firstItem="YYo-7X-n2Y" firstAttribute="top" secondItem="5Oq-Rt-4p8" secondAttribute="bottom" constant="10" id="LwQ-4G-atq"/>
                             <constraint firstItem="QUI-I5-XAT" firstAttribute="top" secondItem="huw-wy-m4z" secondAttribute="bottom" constant="20" id="RkT-1H-Cfc"/>
                             <constraint firstItem="huw-wy-m4z" firstAttribute="top" secondItem="MZx-Go-O47" secondAttribute="bottom" constant="10" id="SUh-5J-I2I"/>
-                            <constraint firstAttribute="trailing" secondItem="MZx-Go-O47" secondAttribute="trailing" constant="10" id="Sca-uq-2Dk"/>
+                            <constraint firstAttribute="trailing" secondItem="MZx-Go-O47" secondAttribute="trailing" id="Sca-uq-2Dk"/>
                             <constraint firstAttribute="trailing" secondItem="nK8-Ea-m3c" secondAttribute="trailing" constant="20" id="a3i-6j-QfY"/>
                             <constraint firstItem="MZx-Go-O47" firstAttribute="top" secondItem="GM2-WF-jee" secondAttribute="bottom" constant="10" id="aHx-tf-Fkk"/>
                             <constraint firstItem="QUI-I5-XAT" firstAttribute="top" secondItem="nK8-Ea-m3c" secondAttribute="bottom" constant="20" id="hT1-Xs-K9M"/>

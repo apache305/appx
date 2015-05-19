@@ -13,7 +13,7 @@ class QuestionDetailViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var questionUserImageView: UIImageView!
 
     @IBOutlet weak var questionDetailTableView: UITableView!
-    var tableContent:[MultiMediaCell] = [MultiMediaCell]()
+    var tableContent:[MultiMedia] = [MultiMedia]()
 
     var currentQuestion : Question?
     
@@ -35,10 +35,25 @@ class QuestionDetailViewController: UIViewController, UITableViewDelegate, UITab
         self.questionUser.text = currentQuestion?.questionUser
         self.questionUserImageView.image = UIImage(named: "meinv")
         
+        let title:MultiMedia = MultiMedia()
+        title.initWithValue(false, isLabel: true, isNeedLargeFontSize: true, text: self.currentQuestion?.questionTitle, imageName: nil)
+        let body:MultiMedia = MultiMedia()
+        body.initWithValue(false, isLabel: true, isNeedLargeFontSize: false, text: self.currentQuestion?.questionBody, imageName: nil)
+       
+        let image1:MultiMedia  = MultiMedia()
+        image1.initWithValue(true, isLabel: false, isNeedLargeFontSize: false, text: nil, imageName: "meinv")
+
+        
+        self.tableContent.append(title)
+        self.tableContent.append(body)
+        self.tableContent.append(image1)
+        
         self.questionDetailTableView.tableFooterView = UIView(frame: CGRectZero)
         self.questionDetailTableView.backgroundColor = UIColor.clearColor()
+        //self.questionDetailTableView.rowHeight = UITableViewAutomaticDimension
         //println("wtf+ \(self.self.questionDetailTableView.frame.size.width)")
-        self.questionDetailTableView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        //self.questionDetailTableView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)  //满屏幕的。
+        //println( self.questionDetailTableView.frame)
 
         
         
@@ -49,16 +64,73 @@ class QuestionDetailViewController: UIViewController, UITableViewDelegate, UITab
         //self.navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Chalkduster", size: 20)!], forState: UIControlState.Normal)
         
     }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let a = MultiMediaCell()
-        return a
 
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        var eachMultiMedia = self.tableContent[indexPath.row]
+        if(eachMultiMedia.isLabel){
+            //compute height
+            let label:UILabel = UILabel(frame: CGRectMake(0, 0, self.questionDetailTableView.frame.width-40, CGFloat.max))
+            label.numberOfLines = 0
+            label.lineBreakMode = NSLineBreakMode.ByWordWrapping
+            if (eachMultiMedia.isNeedLargeFontSize){
+                label.font = UIFont.systemFontOfSize(24)
+
+            }else{
+                label.font = UIFont.systemFontOfSize(18)
+
+            }
+            label.text = eachMultiMedia.text
+            
+            label.sizeToFit()
+            
+            return label.frame.height+20
+        }
+        else if(eachMultiMedia.isImage){
+            //fix height
+            return 200
+        }else{
+            return 300
+        }
         
     }
     
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        //let a = MultiMediaCell()
+        //return a
+        
+        let cellIdentifier = NSStringFromClass(MultiMedia)
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! MultiMediaCell!
+        //var cell = MultiMediaCell
+        var eachMultiMedia = self.tableContent[indexPath.row]
+        
+        if cell == nil{
+            cell = MultiMediaCell (style: .Default, reuseIdentifier: cellIdentifier)
+        }
+        //if (eachMultiMedia.isLabel  && )
+
+        
+        
+        //println(cell.frame)
+        
+
+        cell.configureWithContent(eachMultiMedia)
+        
+        //cell.frame = CGRectMake(0, 0, self.questionDetailTableView.frame.size.width-10, 44)
+        //cell.contentView.frame = CGRectMake(0, 0, self.questionDetailTableView.frame.size.width-10, 44)
+
+        
+        println(cell.frame)
+        println(self.questionDetailTableView.frame)
+        println(cell.contentView.frame)
+        println(cell.cellLabel.frame)
+
+        return cell
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tableContent.count+1
+        return self.tableContent.count
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -82,6 +154,7 @@ class QuestionDetailViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLayoutSubviews() {
         println("QuestionDetailView load subviews")
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 76.0/255.0, green: 152/255.0, blue: 198/255.0, alpha: 1)
+        
         
     
     }
