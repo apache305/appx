@@ -296,7 +296,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="meinv" translatesAutoresizingMaskIntoConstraints="NO" id="eRc-oo-IEg">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="a02" translatesAutoresizingMaskIntoConstraints="NO" id="eRc-oo-IEg">
                                                     <rect key="frame" x="25" y="8" width="45" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="CnB-GS-zjK"/>
@@ -423,11 +423,11 @@
             </objects>
             <point key="canvasLocation" x="-651" y="550"/>
         </scene>
-        <!--Q&A-->
+        <!--Navigation Controller-->
         <scene sceneID="Kmy-9L-1kd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qf9-fg-JKd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Q&amp;A" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="L2S-lV-zUw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -445,11 +445,11 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Chats-->
+        <!--Navigation Controller-->
         <scene sceneID="2Mw-fK-cab">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ttQ-c3-jsu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chats" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vfg-We-X59">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -502,7 +502,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hjt-x8-Ofi" id="eDZ-xZ-Q2Z">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meinv" translatesAutoresizingMaskIntoConstraints="NO" id="OJH-Jc-zs8">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="OJH-Jc-zs8">
                                                     <rect key="frame" x="25" y="5" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="XnH-p3-DWg"/>
@@ -519,7 +519,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="meAboutValue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HW7-rB-gAk">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="meAboutValue" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HW7-rB-gAk">
                                                     <rect key="frame" x="400" y="10" width="100" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="qrh-R1-g4U"/>
@@ -600,11 +600,11 @@
             </objects>
             <point key="canvasLocation" x="2295" y="419"/>
         </scene>
-        <!--My-->
+        <!--Navigation Controller-->
         <scene sceneID="i8L-he-NEa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="baE-ev-NPe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My" image="first" id="2Gs-Hq-63J"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="2Gs-Hq-63J"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QBo-jS-lRp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -639,8 +639,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="a02" width="300" height="300"/>
         <image name="meinv" width="150" height="150"/>
-        <image name="second" width="30" height="30"/>
+        <image name="settings" width="512" height="512"/>
     </resources>
 </document>
