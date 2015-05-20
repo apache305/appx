@@ -115,7 +115,7 @@ class MessageCell : UITableViewCell{
 let bubbleImage = bubbleImageMake()
 func bubbleImageMake() -> (incoming: UIImage, incomingHighlighed: UIImage, outgoing: UIImage, outgoingHighlighed: UIImage) {
     //这个messagebubble 就是 背景。
-    let maskOutgoing = UIImage(named: "MessageBubble")!
+    let maskOutgoing = UIImage(named: "MessageBB")!
     //把这个反向了，因为聊天气泡带个小尾巴
     let maskIncoming = UIImage(CGImage: maskOutgoing.CGImage, scale: 2, orientation: .UpMirrored)!
     // 设置左边26.5以左 右边21以右不拉升。。可是这个图片的size是多少。。就敢这么拉
