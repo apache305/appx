@@ -10,6 +10,9 @@
 		6E24738D1AFA415100FE642E /* a02.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E24738C1AFA415100FE642E /* a02.png */; };
 		6E24738F1AFA552D00FE642E /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E24738E1AFA552D00FE642E /* test.png */; };
 		6E9332791ADE5E2F006B2E22 /* QuestionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9332781ADE5E2F006B2E22 /* QuestionDetailViewController.swift */; };
+		6EC5C6081B51169500611BD6 /* find_s.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5C6071B51169500611BD6 /* find_s.png */; };
+		6EC5C60A1B5116A000611BD6 /* message_s.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5C6091B5116A000611BD6 /* message_s.png */; };
+		6EC5C60C1B5118D600611BD6 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5C60B1B5118D600611BD6 /* setting.png */; };
 		6ED134DE1B0B92BD00F183AE /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED134DD1B0B92BD00F183AE /* MyViewController.swift */; };
 		6ED134E21B0B93D100F183AE /* MeAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED134E11B0B93D100F183AE /* MeAbout.swift */; };
 		6ED134E41B0B960700F183AE /* MeAboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED134E31B0B960700F183AE /* MeAboutCell.swift */; };
@@ -46,6 +49,9 @@
 		6E24738C1AFA415100FE642E /* a02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a02.png; sourceTree = "<group>"; };
 		6E24738E1AFA552D00FE642E /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		6E9332781ADE5E2F006B2E22 /* QuestionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailViewController.swift; sourceTree = "<group>"; };
+		6EC5C6071B51169500611BD6 /* find_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = find_s.png; sourceTree = "<group>"; };
+		6EC5C6091B5116A000611BD6 /* message_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message_s.png; sourceTree = "<group>"; };
+		6EC5C60B1B5118D600611BD6 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		6ED134DD1B0B92BD00F183AE /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		6ED134E11B0B93D100F183AE /* MeAbout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeAbout.swift; sourceTree = "<group>"; };
 		6ED134E31B0B960700F183AE /* MeAboutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeAboutCell.swift; sourceTree = "<group>"; };
@@ -111,6 +117,9 @@
 		6EE9E3751AD2C5540033083D /* haoren */ = {
 			isa = PBXGroup;
 			children = (
+				6EC5C6091B5116A000611BD6 /* message_s.png */,
+				6EC5C6071B51169500611BD6 /* find_s.png */,
+				6EC5C60B1B5118D600611BD6 /* setting.png */,
 				6E24738E1AFA552D00FE642E /* test.png */,
 				6EDFB6F51ADEBCE20040F1A4 /* Main.storyboard */,
 				6EE3C8F71B0A1497008BE81D /* MultiMediaCell.swift */,
@@ -243,11 +252,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EC5C6081B51169500611BD6 /* find_s.png in Resources */,
 				6EDFB6F61ADEBCE20040F1A4 /* Main.storyboard in Resources */,
 				6E24738F1AFA552D00FE642E /* test.png in Resources */,
 				6E24738D1AFA415100FE642E /* a02.png in Resources */,
+				6EC5C60C1B5118D600611BD6 /* setting.png in Resources */,
 				6EE9E3851AD2C5540033083D /* LaunchScreen.xib in Resources */,
 				6EE9E3821AD2C5540033083D /* Images.xcassets in Resources */,
+				6EC5C60A1B5116A000611BD6 /* message_s.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
