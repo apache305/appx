@@ -23,6 +23,8 @@ class Question {
     var questionReward: String
     //问题的类型
     var questionType: String
+    //问题的头像。。。回头再改吧
+    var questionUserImg: String
     
     
     //初始化函数
@@ -32,7 +34,8 @@ class Question {
         questionCreateTime: String,
         questionUser : String,
         questionReward: String,
-        questionType: String
+        questionType: String,
+        questionUserImg: String
         ) {
         self.questionTitle      = questionTitle
         self.questionBody       = questionBody
@@ -41,6 +44,7 @@ class Question {
         self.questionUser       = questionUser
         self.questionReward     = questionReward
         self.questionType       = questionType
+        self.questionUserImg    = questionUserImg
     }
     
     //解开收到的json包
@@ -58,6 +62,9 @@ class Question {
                 var questionReward: String      = result["questionReward"] as? String ?? ""
                 var questionType: String        = result["questionType"] as? String ?? ""
                 
+                var questionUserImg: String  =
+                    result["questionUserImg"] as? String ?? ""
+                
                 
                 //创建一个新问题
                 var aQuestion = Question(
@@ -67,7 +74,8 @@ class Question {
                     questionCreateTime: questionCreateTime,
                     questionUser: questionUser,
                     questionReward: questionReward,
-                    questionType: questionType)
+                    questionType: questionType,
+                    questionUserImg: questionUserImg)
                 receivedQuestions.append(aQuestion)
             }
         }

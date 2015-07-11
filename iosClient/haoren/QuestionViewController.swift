@@ -64,7 +64,7 @@ class QuestionViewController: UIViewController, UITableViewDataSource,UITableVie
         cell.questionBody.text       = question.questionBody
         cell.questionBody.lineBreakMode = .ByWordWrapping // or NSLineBreakMode.ByWordWrapping
         cell.questionBody.numberOfLines = 0
-        cell.questionUserImage.image = UIImage(named: "meinv")
+        cell.questionUserImage.image = UIImage(named: question.questionUserImg)
         cell.questionUserImage.layer.cornerRadius = cell.questionUserImage.frame.size.width / 10.0  //
         cell.questionUserImage.clipsToBounds = true
 
@@ -110,12 +110,17 @@ class QuestionViewController: UIViewController, UITableViewDataSource,UITableVie
     
     
     func prepareForTest(){
+        
+        
+        
+        
+        
     // 准备一些测试数据
-        var q1:Question = Question(questionTitle: "我是一个标题1", questionBody: "我是问题的内容，我这个问题比较复杂，你得慢慢看", questionLocation: "100米", questionCreateTime: "2015/15/04", questionUser: "王麻子", questionReward: "1分", questionType: "紧急")
-        var q2:Question = Question(questionTitle: "我是一个标题2", questionBody: "我是问题的内容，我这个问题比较复杂，你得慢慢看,我是问题的内容，我这个问题比较复杂，你得慢慢看", questionLocation: "200米", questionCreateTime: "2015/14/04", questionUser: "李麻子", questionReward: "2分", questionType: "不紧急")
-        var q3:Question = Question(questionTitle: "我是一个标题3,我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看", questionBody: "我是问题的内容，我这个问题比较复杂，你得慢慢看,我是问题的内容，我这个问题比较复杂，你得慢慢看, 我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看", questionLocation: "300米", questionCreateTime: "2015/13/04", questionUser: "张麻子", questionReward: "3分", questionType: "非常紧急")
-        var q4:Question = Question(questionTitle: "我是一个标题4", questionBody: "我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看我是问题的内容，我这个问题比较复杂，你得慢慢看", questionLocation: "400米", questionCreateTime: "2015/12/04", questionUser: "赵麻子", questionReward: "4分", questionType: "一般般")
-        var q5:Question = Question(questionTitle: "我是一个标题5", questionBody: "我是问题的内容，我这个问题比较复杂，你得慢慢看", questionLocation: "500米", questionCreateTime: "2015/11/04", questionUser: "钱麻子", questionReward: "5分", questionType: "捉急啊")
+        var q1:Question = Question(questionTitle: "中华大厦附近公交站", questionBody: "我现在在中华大厦，要去机场，附近的11路公交车站点在哪里，急！！在线等。。", questionLocation: "100m", questionCreateTime: "2015/01/03", questionUser: "大地", questionReward: "10分", questionType: "紧急", questionUserImg: "1.png")
+        var q2:Question = Question(questionTitle: "板蓝根冲剂", questionBody: "焦化市场附近哪个药店有卖板蓝根的？谢谢", questionLocation: "200米", questionCreateTime: "2015/14/04", questionUser: "tom", questionReward: "2分", questionType: "不紧急", questionUserImg: "2.png")
+        var q3:Question = Question(questionTitle: "寻狗狗！黑色哈士奇", questionBody: "今天（3号）早上在中心公园散步，不小心把狗狗弄丢了，黑色哈士奇，很大，后背上有一小块白色的毛。有新看见的话请速与我联系，158 1234 5434, 有重谢。", questionLocation: "300米", questionCreateTime: "2015/13/04", questionUser: "绿精灵", questionReward: "3分", questionType: "非常紧急", questionUserImg: "3.jpg")
+        var q4:Question = Question(questionTitle: "市中心出售自行车一辆", questionBody: "一辆年初新买的山地自行车，9成新，因为要搬家，所以转让，7折转让，感兴趣私聊。", questionLocation: "400米", questionCreateTime: "2015/12/05", questionUser: "jack", questionReward: "15分", questionType: "一般般", questionUserImg: "5.png")
+        var q5:Question = Question(questionTitle: "夏威夷餐厅开门时间", questionBody: "谁知道夏威夷餐厅周日开不开门啊？", questionLocation: "500米", questionCreateTime: "2015/11/04", questionUser: "钱麻子", questionReward: "5分", questionType: "捉急啊", questionUserImg: "6.jpg")
         self.questionTable.append(q1)
         self.questionTable.append(q2)
         self.questionTable.append(q3)

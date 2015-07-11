@@ -33,7 +33,7 @@ class QuestionDetailViewController: UIViewController, UITableViewDelegate, UITab
         self.questionLocation.text = currentQuestion?.questionLocation
         self.questionCreateTime.text = currentQuestion?.questionCreateTime
         self.questionUser.text = currentQuestion?.questionUser
-        self.questionUserImageView.image = UIImage(named: "meinv")
+        self.questionUserImageView.image = UIImage(named: currentQuestion!.questionUserImg)
         
         let title:MultiMedia = MultiMedia()
         title.initWithValue(false, isLabel: true, isNeedLargeFontSize: true, text: self.currentQuestion?.questionTitle, imageName: nil)
@@ -41,7 +41,7 @@ class QuestionDetailViewController: UIViewController, UITableViewDelegate, UITab
         body.initWithValue(false, isLabel: true, isNeedLargeFontSize: false, text: self.currentQuestion?.questionBody, imageName: nil)
        
         let image1:MultiMedia  = MultiMedia()
-        image1.initWithValue(true, isLabel: false, isNeedLargeFontSize: false, text: nil, imageName: "meinv")
+        //image1.initWithValue(true, isLabel: false, isNeedLargeFontSize: false, text: nil, imageName: "meinv")
 
         
         self.tableContent.append(title)
