@@ -14,6 +14,7 @@
 		6EC5C60A1B5116A000611BD6 /* message_s.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5C6091B5116A000611BD6 /* message_s.png */; };
 		6EC5C60C1B5118D600611BD6 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5C60B1B5118D600611BD6 /* setting.png */; };
 		6EC5C60E1B511B1B00611BD6 /* mymap.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC5C60D1B511B1B00611BD6 /* mymap.png */; };
+		6EC5C6101B511D6A00611BD6 /* MyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5C60F1B511D6A00611BD6 /* MyMapViewController.swift */; };
 		6ED134DE1B0B92BD00F183AE /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED134DD1B0B92BD00F183AE /* MyViewController.swift */; };
 		6ED134E21B0B93D100F183AE /* MeAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED134E11B0B93D100F183AE /* MeAbout.swift */; };
 		6ED134E41B0B960700F183AE /* MeAboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED134E31B0B960700F183AE /* MeAboutCell.swift */; };
@@ -54,6 +55,7 @@
 		6EC5C6091B5116A000611BD6 /* message_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message_s.png; sourceTree = "<group>"; };
 		6EC5C60B1B5118D600611BD6 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		6EC5C60D1B511B1B00611BD6 /* mymap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mymap.png; sourceTree = "<group>"; };
+		6EC5C60F1B511D6A00611BD6 /* MyMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMapViewController.swift; sourceTree = "<group>"; };
 		6ED134DD1B0B92BD00F183AE /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		6ED134E11B0B93D100F183AE /* MeAbout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeAbout.swift; sourceTree = "<group>"; };
 		6ED134E31B0B960700F183AE /* MeAboutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeAboutCell.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				6E24738E1AFA552D00FE642E /* test.png */,
 				6EDFB6F51ADEBCE20040F1A4 /* Main.storyboard */,
 				6EE3C8F71B0A1497008BE81D /* MultiMediaCell.swift */,
+				6EC5C60F1B511D6A00611BD6 /* MyMapViewController.swift */,
 				6EE3C8F91B0A2305008BE81D /* MultiMedia.swift */,
 				6E9332781ADE5E2F006B2E22 /* QuestionDetailViewController.swift */,
 				6EDFB6E71ADEABAC0040F1A4 /* Chat.swift */,
@@ -290,6 +293,7 @@
 				6EDFB6F01ADEB0920040F1A4 /* MessageViewController.swift in Sources */,
 				6EDFB6F41ADEB0AD0040F1A4 /* MessageCell.swift in Sources */,
 				6E9332791ADE5E2F006B2E22 /* QuestionDetailViewController.swift in Sources */,
+				6EC5C6101B511D6A00611BD6 /* MyMapViewController.swift in Sources */,
 				6EE3C8FA1B0A2305008BE81D /* MultiMedia.swift in Sources */,
 				6EDFB6F21ADEB09C0040F1A4 /* Message.swift in Sources */,
 				6ED134E21B0B93D100F183AE /* MeAbout.swift in Sources */,

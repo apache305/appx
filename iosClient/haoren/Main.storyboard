@@ -583,10 +583,10 @@
             </objects>
             <point key="canvasLocation" x="1562" y="1124"/>
         </scene>
-        <!--View Controller-->
+        <!--My Map View Controller-->
         <scene sceneID="dKB-Wj-YUg">
             <objects>
-                <viewController id="LlU-4H-IK0" sceneMemberID="viewController">
+                <viewController id="LlU-4H-IK0" customClass="MyMapViewController" customModule="haoren" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hag-Ab-kay"/>
                         <viewControllerLayoutGuide type="bottom" id="m0w-ZM-xF1"/>
@@ -594,13 +594,21 @@
                     <view key="view" contentMode="scaleToFill" id="0mZ-6a-yOn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Chn-cB-2JN">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="uxJ-WH-d1O"/>
+                    <connections>
+                        <outlet property="myMap" destination="Chn-cB-2JN" id="xX8-xk-8Xz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ffm-hk-CXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1579" y="2050"/>
+            <point key="canvasLocation" x="1681" y="2016"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="agM-W1-edr">
