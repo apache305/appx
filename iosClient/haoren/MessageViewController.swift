@@ -71,14 +71,15 @@ class MessageViewController: UIViewController ,UITableViewDataSource,UITableView
     
     func prepareForTest(){
         
-        var message1:Message = Message(messageBody: "夏威夷周日不开，只有周二到周六", messageFrom: "tom", messageIsMe: false)
+        var message1:Message = Message(messageBody: "不开，只有周二到周六", messageFrom: "tom", messageIsMe: false)
         var message2:Message = Message(messageBody: "这样啊，谢谢", messageFrom: "Charlie陈", messageIsMe: true)
-        var message3:Message = Message(messageBody: "那你知道附近其他有什么好餐厅周日开吗",      messageFrom: "Charlie陈", messageIsMe: true)
+        var message3:Message = Message(messageBody: "那你知道附近还有么",      messageFrom: "Charlie陈", messageIsMe: true)
         var message4:Message = Message(messageBody: "你是想找西餐吗", messageFrom: "tom", messageIsMe: false)
-        var message5:Message = Message(messageBody: "是的，我要请一个外国朋友吃饭", messageFrom: "Charlie陈", messageIsMe: true)
-        var message6:Message = Message(messageBody: "我去过一个叫做Chez Pierre的法国餐厅，就在旁边", messageFrom: "tom", messageIsMe: false)
-        var message7:Message = Message(messageBody: "周日开吗", messageFrom: "Charlie陈", messageIsMe: true)
-        var message8:Message = Message(messageBody: "开的，我上次去的时候就是周末，环境很优雅", messageFrom: "tom", messageIsMe: false)
+        var message5:Message = Message(messageBody: "是的", messageFrom: "Charlie陈", messageIsMe: true)
+        var message6:Message = Message(messageBody: "我去过一个叫做Chez Pierre", messageFrom: "tom", messageIsMe: false)
+        var message7:Message = Message(messageBody: "好像就在旁边", messageFrom: "tom", messageIsMe: false)
+        var message8:Message = Message(messageBody: "周日开吗", messageFrom: "Charlie陈", messageIsMe: true)
+        var message9:Message = Message(messageBody: "我上次去的时候就是周末", messageFrom: "tom", messageIsMe: false)
 
         
         self.messageTable.append(message1)
@@ -89,6 +90,7 @@ class MessageViewController: UIViewController ,UITableViewDataSource,UITableView
         self.messageTable.append(message6)
         self.messageTable.append(message7)
         self.messageTable.append(message8)
+        self.messageTable.append(message9)
         
         
         //self.messageTableView.frame.width =
