@@ -17,16 +17,21 @@ class Chat {
     //未读消息树目
     var chatUnReadMessages: Int
     
+    //
+    var chatUserImg: String
+    
     //初始化
     init ( chatUser: String,
         chatLastMessage: String,
         chatLastTime: String,
-        chatUnReadMessages: Int
+        chatUnReadMessages: Int,
+        chatUserImg: String
         )  {
             self.chatUser           = chatUser
             self.chatLastMessage    = chatLastMessage
             self.chatLastTime       = chatLastTime
             self.chatUnReadMessages = chatUnReadMessages
+            self.chatUserImg        = chatUserImg
     }
     
     

@@ -11,6 +11,7 @@ import UIKit
 class ChatCell:UITableViewCell{
     @IBOutlet weak var chatUser: UILabel!
     
+    @IBOutlet weak var chatUserImg: UIImageView!
     @IBOutlet weak var lastMessage: UILabel!
     
     @IBOutlet weak var lastMessageTime: UILabel!

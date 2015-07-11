@@ -330,6 +330,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="chatUser" destination="sTA-nn-HIe" id="6EO-M7-suI"/>
+                                            <outlet property="chatUserImg" destination="eRc-oo-IEg" id="bga-oz-KIH"/>
                                             <outlet property="lastMessage" destination="DDJ-rX-KVB" id="iCc-0d-OJu"/>
                                             <outlet property="lastMessageTime" destination="zam-8y-lOz" id="1tv-FU-dMf"/>
                                             <segue destination="r3F-9J-Uy4" kind="show" id="7OW-LA-GgV"/>

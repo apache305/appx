@@ -24,6 +24,10 @@ class ChatViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         cell.chatUser.text        = eachChat.chatUser
         cell.lastMessage.text     = eachChat.chatLastMessage
         cell.lastMessageTime.text = eachChat.chatLastTime
+        cell.chatUserImg.image    = UIImage(named: eachChat.chatUserImg)
+
+        
+        //cell.
         //println("did i run again")
         return cell
         
@@ -51,13 +55,13 @@ class ChatViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     
     func prepareForTest(){
         
-        var chat1:Chat = Chat(chatUser: "王麻子", chatLastMessage: "你吃饭了没", chatLastTime: "10:30", chatUnReadMessages: 0)
-        var chat2:Chat = Chat(chatUser: "李麻子李麻子李麻子李麻子李麻子李麻子李麻子李麻子李麻子", chatLastMessage: "你在干啥呢", chatLastTime: "11:30", chatUnReadMessages: 1)
-        var chat3:Chat = Chat(chatUser: "陈麻子", chatLastMessage: "你有几个麻子你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢", chatLastTime: "12:30", chatUnReadMessages: 2)
+        var chat1:Chat = Chat(chatUser: "Charlie陈", chatLastMessage: "夏威夷周日不开，只有周二到周六", chatLastTime: "10:30", chatUnReadMessages: 0 ,chatUserImg:"1.png")
+        var chat2:Chat = Chat(chatUser: "绿精灵", chatLastMessage: "你的狗丢了？", chatLastTime: "11:30", chatUnReadMessages: 1, chatUserImg:"2.png")
+        //var chat3:Chat = Chat(chatUser: "陈麻子", chatLastMessage: "你有几个麻子你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢你在干啥呢", chatLastTime: "12:30", chatUnReadMessages: 2)
         
         self.chatTable.append(chat1)
         self.chatTable.append(chat2)
-        self.chatTable.append(chat3)
+        //self.chatTable.append(chat3)
         
         
     }
